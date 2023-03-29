@@ -1,8 +1,33 @@
-<script setup>
+<script>
+import ModalAge from './components/ModalAge.vue';
+export default {
+  components: {
+    ModalAge
+  },
+  data: () => {
+    return {
+      showModal: false
+    }
+  },
+  computed: {
+    isShowModal() {
+      return !this.showModal
+    }
+  },
+  mounted() {
+    this.showModal = localStorage.overage === "true"
+  },
+  methods: {
+    hiddenModal() {
+      this.showModal = true;
+    }
+  }
+}
 </script>
 
 <template>
- <h1>drunkyducks</h1>
+  <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
+  <h1>drunkyducks</h1>
 </template>
 
 <style scoped>
