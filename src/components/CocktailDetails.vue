@@ -6,7 +6,6 @@ export default {
   },
   methods: {
     getAlt: function () {
-      console.log(this.cocktail.strDrink.toLowerCase());
       return `cocktail ${this.cocktail.strDrink.toLowerCase()} image`;
     }
   }
