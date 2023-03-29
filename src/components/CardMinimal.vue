@@ -5,7 +5,7 @@ export default {
     cocktail: Object
   },
   methods: {
-    getAlt: () => {
+    getAlt: function ()  {
       return `cocktail ${this.cocktail.strDrink.toLowerCase()} image`
     }
   }
@@ -14,15 +14,15 @@ export default {
 
 <template>
   <div class="container">
-    <img :src="cocktail.strDrinkThumb" :alt="getAlt">
-    <div>
+    <img :src="cocktail.strDrinkThumb" :alt="getAlt()">
+    <div class="info">
       <h1>{{ cocktail.strDrink }}</h1>
       <span>ℹ</span>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   flex-direction: column;
@@ -42,9 +42,10 @@ img {
   border-radius: 50%;
   border: 5px solid #40bfc1;
   box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+  z-index: 1;
 }
 
-div {
+.info {
   width: 80%;
   background: #202124;
   border: 5px solid #40bfc1;
