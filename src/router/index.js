@@ -10,9 +10,9 @@ const router = createRouter({
       component: SearchView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: ''
+      path: '/details/:id',
+      name: 'details',
+      component: () => import('../views/DetailsView.vue')
     }
   ]
 })

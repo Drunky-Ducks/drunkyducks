@@ -1,52 +1,43 @@
 <script>
+import SearchCocktails from '../components/SearchCocktails.vue';
+import CardMinimal from '../components/CardMinimal.vue';
+
 export default {
-  name: "SearchView"
+  name: "SearchView",
+  data() {
+    return {
+      searchOcurrence: []
+    }
+  },
+  components: {
+    SearchCocktails, CardMinimal
+  },
+  computed: {
+    getOcurrence() {
+      return this.searchOcurrence
+    }
+  },
+  methods: {
+    fillResult(result) {
+      this.searchOcurrence = result
+    }
+  }
 }
 </script>
 
 <template>
   <div>
-    <form class="search-form">
-      <input id="searcher" type="text" placeholder="Buscar" class="search-input" autocomplete="off">
-      <button id="search" type="submit" class="search-button"><i class="fas fa-search"></i></button>
-    </form>
+    <SearchCocktails @fillResult="fillResult"></SearchCocktails>
     <div class="container">
       <div class="tittle animate__animated animate__fadeInDown animate__delay-10">Cócteles</div>
       <div class="list">
+        <CardMinimal v-for="(value, index) in searchOcurrence" :key="index" :cocktail="value"></CardMinimal>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.search-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 10px;
-}
-
-.search-input {
-  width: 80%;
-  max-width: 800px;
-  height: 3rem;
-  padding: 1rem;
-  border: none;
-  border-bottom: 2px solid rgb(164 164 163);
-  border-radius: 20px;
-  font-size: 1.2rem;
-  outline: none;
-  background-color: #bbb5b5;
-}
-
-.search-button {
-  background-color: transparent;
-  border: none;
-  color: #333;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 .container{
   display: flex;
   flex-direction: column;

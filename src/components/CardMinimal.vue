@@ -1,12 +1,20 @@
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
   name: "CardMinimal",
+  components: {
+    RouterLink
+  },
   props: {
     cocktail: Object
   },
   methods: {
-    getAlt: function ()  {
+    getAlt: function () {
       return `cocktail ${this.cocktail.strDrink.toLowerCase()} image`
+    },
+    goDetails() {
+
     }
   }
 }
@@ -14,24 +22,30 @@ export default {
 
 <template>
   <div class="container">
-    <img :src="cocktail.strDrinkThumb" :alt="getAlt()">
-    <div class="info">
-      <h1>{{ cocktail.strDrink }}</h1>
-      <span>ℹ</span>
-    </div>
+    <RouterLink :to="`/details/${cocktail.strDrink}`">
+      <img :src="cocktail.strDrinkThumb" :alt="getAlt()">
+      <div class="info">
+        <h1>{{ cocktail.strDrink }}</h1>
+        <span>ℹ</span>
+      </div>
+    </RouterLink>
   </div>
 </template>
 
 <style scoped>
 .container {
+  max-width: 400px;
+  text-align: center;
+  filter: drop-shadow(2px 2px 5px black) drop-shadow(-2px -2px 5px black)
+}
+
+a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 400px;
-  text-align: center;
-  filter: drop-shadow(2px 2px 5px black) drop-shadow(-2px -2px 5px black)
+  text-decoration: none;
 }
 
 img {
