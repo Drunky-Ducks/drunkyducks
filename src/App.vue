@@ -1,17 +1,35 @@
 <script>
-import FooterPage from './components/FooterPage.vue';
 import { RouterView } from 'vue-router';
-// import { server } from './services/firebase.js';
-// server()
-
+import FooterPage from './components/FooterPage.vue';
+import ModalAge from './components/ModalAge.vue';
 export default {
   components: {
-    FooterPage, RouterView
+    ModalAge, FooterPage, RouterView
+  },
+  data: () => {
+    return {
+      showModal: false
+    }
+  },
+  computed: {
+    isShowModal() {
+      return !this.showModal
+    }
+  },
+  mounted() {
+    this.showModal = localStorage.overage === "true"
+  },
+  methods: {
+    hiddenModal() {
+      this.showModal = true;
+    }
   }
 }
 </script>
 
 <template>
+  <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
+
   <header>
     <div class="title-logo">
       <h1>Drunky<span>Ducks</span></h1>
