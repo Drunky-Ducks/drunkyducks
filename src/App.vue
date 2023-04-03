@@ -16,7 +16,7 @@ export default {
       return !this.showModal
     }
   },
-  mounted() {
+  beforeMount() {
     this.showModal = localStorage.overage === "true"
   },
   methods: {

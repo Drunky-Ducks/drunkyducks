@@ -1,6 +1,7 @@
 <script>
 import SearchCocktails from '../components/SearchCocktails.vue';
 import CardMinimal from '../components/CardMinimal.vue';
+import NotFound from '../components/NotFound.vue';
 
 export default {
   name: "SearchView",
@@ -10,7 +11,7 @@ export default {
     }
   },
   components: {
-    SearchCocktails, CardMinimal
+    SearchCocktails, CardMinimal, NotFound
   },
   computed: {
     getOcurrence() {
@@ -31,6 +32,7 @@ export default {
     <div class="container">
       <div class="tittle animate__animated animate__fadeInDown animate__delay-10">Cócteles</div>
       <div class="list">
+        <NotFound v-if="!searchOcurrence.length"></NotFound>
         <CardMinimal v-for="(value, index) in searchOcurrence" :key="index" :cocktail="value"></CardMinimal>
       </div>
     </div>
