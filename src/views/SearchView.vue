@@ -1,4 +1,6 @@
 <script>
+import cocktails from '../services/cocktails.json'
+
 import SearchCocktails from '../components/SearchCocktails.vue';
 import CardMinimal from '../components/CardMinimal.vue';
 import NotFound from '../components/NotFound.vue';
@@ -12,6 +14,11 @@ export default {
   },
   components: {
     SearchCocktails, CardMinimal, NotFound
+  },
+  beforeMount() {
+    for(let i = 0; i < 10; i++) {
+      this.searchOcurrence.push(cocktails.drinks[i])
+    }
   },
   computed: {
     getOcurrence() {
