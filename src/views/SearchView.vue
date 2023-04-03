@@ -1,0 +1,95 @@
+<script>
+export default {
+  name: "SearchView"
+}
+</script>
+
+<template>
+  <div>
+    <form class="search-form">
+      <input id="searcher" type="text" placeholder="Buscar" class="search-input" autocomplete="off">
+      <button id="search" type="submit" class="search-button"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="container">
+      <div class="tittle animate__animated animate__fadeInDown animate__delay-10">Cócteles</div>
+      <div class="list">
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 800px;
+  height: 3rem;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid rgb(164 164 163);
+  border-radius: 20px;
+  font-size: 1.2rem;
+  outline: none;
+  background-color: #bbb5b5;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 10px 50px;
+}
+
+.tittle {
+  color: #ffc300;;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  flex: 1;
+}
+
+.tag {
+  height: 400px;
+  width: 90%;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #bbb5b5;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 50.8%) 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 23%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 90px;
+  height: 100%;
+}
+</style>

@@ -1,87 +1,59 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import { server } from './services/firebase.js';
-server()
+<script>
+import FooterPage from './components/FooterPage.vue';
+import { RouterView } from 'vue-router';
+// import { server } from './services/firebase.js';
+// server()
+
+export default {
+  components: {
+    FooterPage, RouterView
+  }
+}
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <div class="title-logo">
+      <h1>Drunky<span>Ducks</span></h1>
     </div>
   </header>
-
-  <RouterView />
+  <div class="container">
+    <RouterView></RouterView>
+  </div>
+  <FooterPage></FooterPage>
 </template>
 
 <style scoped>
+
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  margin-top: 2rem;
+  padding: 50px 5px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 10px black;
+  font-family: Cheri, fantasy;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.title-logo a {
+  text-decoration: none;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.title-logo h1 {
+  margin: 0;
+  color: #40bfc1;
 }
 
-nav a:first-of-type {
-  border: 0;
+.title-logo span {
+  color: #f6c343;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.container {
+  flex: 1;
 }
 </style>

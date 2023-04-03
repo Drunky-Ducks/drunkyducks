@@ -1,0 +1,98 @@
+/* Estilo pantalla móvil peuqeña */
+@media screen and (max-width: 320px) {
+  .tag {
+    min-width: 90%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developed span {
+    text-align: center;
+  }
+}
+
+/* Pantalla de tablets en adelante */
+@media screen and (min-width: 768px) {
+  .title-logo h1 {
+    font-size: 6rem;
+  }
+
+  .container {
+    gap: 2rem;
+  }
+
+  .modal .container {
+    gap: 0;
+  }
+
+  .tittle {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 80%;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+
+  .list {
+    gap: 4rem;
+  }
+
+  .tag {
+    height: 500px;
+    min-width: 300px;
+    width: 23%;
+    max-width: none;
+  }
+
+  .listzero,
+  .listclassic,
+  .listhight {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .title-logo h1 {
+    font-size: 6rem;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 450px) {
+  .title-logo h1 {
+    font-size: 3.5rem;
+  }
+
+  .tittle {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title-logo h1 {
+    font-size: 3rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developed span {
+    text-align: center;
+  }
+}
