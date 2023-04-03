@@ -14,7 +14,6 @@
     },
     beforeMount() {
       const cocktail = this.$route.params.id
-      console.log(cocktail);
       for(const data of cocktails.drinks) {
         if(data.strDrink === cocktail) {
           this.cocktail = data
