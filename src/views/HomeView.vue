@@ -21,7 +21,7 @@ export default {
   <Swiper title="pukytuki" :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.strClassic)"></Swiper>
   <Swiper title="pukytuki2" :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.str)"></Swiper>
   <Swiper title="pukytuki3" :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.str)"></Swiper>
-  <!-- FALTA LA URL DEL STR LO QUE SEA -->
+  <!-- FALTA LA URL DEL STR LO QUE -->
 </template>
 
 <style scoped>
