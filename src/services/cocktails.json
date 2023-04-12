@@ -18,6 +18,7 @@
         },{
             "strDrink": "Daiquiri",
             "strAlcoholic": "Con Alcohol",
+            "strClassic": true,
             "strDrinkThumb": "https://cdn.diffords.com/contrib/stock-images/2016/11/54/2016f9307258872e6f649ba6bd3be48d912f.jpg",
             "strIngredients": ["Ron Blanco", "Zumo de lima", "Azúcar"],
             "strMeasures": ["4.2 cl", "2.5 cl","1.5 cl"],
@@ -46,6 +47,7 @@
         },{
             "strDrink": "Whisky Sour",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/rpsrqv1468923507.jpg",
             "strIngredients": ["Whisky", "Zumo de limón", "Sirope de azúcar"],
             "strMeasures": ["4.5 cl", "3 cl", "1.5 cl"],
@@ -60,6 +62,7 @@
         },{
             "strDrink": "Caipirinha",
             "strAlcoholic": "Con Alcohol",
+            "strClassic": true,
             "strDrinkThumb": "https://www.comedera.com/wp-content/uploads/2022/04/caipirina.png",
             "strIngredients": ["Cachaza", "Lima", "Azúcar"],
             "strMeasures": ["5 cl", "4 gajos", "2 cucharadas"],
@@ -74,6 +77,7 @@
         },{
             "strDrink": "Cosmopolitan",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/05/COSMOPOLITAN.jpg",
             "strIngredients": ["Vodka", "Cointreau", "Zumo de lima", "Zumo de arándano"],
             "strMeasures": ["4 cl", "1.5 cl", "1.5 cl", "3 cl"],
@@ -81,6 +85,7 @@
         },{
             "strDrink": "Cuba Libre",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://cocinaperuana.espaciolatino.com/recetas-de-bebidas/img600/cuba-libre.jpg",
             "strIngredients": ["Ron Blanco", "Cocacola", "Zumo de lima"],
             "strMeasures": ["5 cl", "12 cl", "1 cl"],
@@ -88,6 +93,7 @@
         },{
             "strDrink": "Irish Coffee",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://www.everythingzoomer.com/wp-content/uploads/2022/03/GettyImages-1087281680.jpg",
             "strIngredients": ["Whisky irlandés", "Cafe", "Crema de leche", "Azúcar moreno"],
             "strMeasures": ["4 cl", "9 cl", "3 cl", "1 cucharada"],
@@ -109,6 +115,7 @@
         },{
             "strDrink": "Long Island Ice Tea",
             "strAlcoholic": "Con Alcohol",
+            "strClassic": true,
             "strDrinkThumb": "https://imag.bonviveur.com/presentacion-final.jpg",
             "strIngredients": ["Ginebra", "Tequila", "Vodka", "Ron Blanco", "Triple sec", "Jarabe de goma", "Zumo de lima", "Cocacola"],
             "strMeasures": ["1.5 cl", "1.5 cl", "1.5 cl", "1.5 cl", "1.5 cl", "3 cl", "2.5 cl"],
@@ -116,6 +123,7 @@
         },{
             "strDrink": "Mai Tai",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://okdiario.com/img/recetas/2017/06/26/maitai.jpg",
             "strIngredients": ["Ron blanco", "Ron oscuro", "Licor de naranja", "Sirope de orchata", "Zumo de lima"],
             "strMeasures": ["4 cl", "2 cl", "1.5 cl", "1.5 cl", "1 cl"],
@@ -130,6 +138,7 @@
         },{
             "strDrink": "Mojito",
             "strAlcoholic": "Con Alcohol",
+            "strClassic": true,
             "strDrinkThumb": "https://imag.bonviveur.com/mojito-cubano.jpg",
             "strIngredients": ["Ron blanco", "Zumo de lima", "Menta", "Azúcar", "Agua con gas"],
             "strMeasures": ["4 cl", "3 cl", "6 ramitas", "2 cucharadas"],
@@ -144,6 +153,7 @@
         },{
             "strDrink": "Piña Colada",
             "strAlcoholic": "Con Alcohol",
+            "strClassic": true,
             "strDrinkThumb": "https://www.acouplecooks.com/wp-content/uploads/2020/11/Pina-Colada-056.jpg",
             "strIngredients": ["Ron Blanco", "Zumo de piña", "Leche de coco"],
             "strMeasures": ["3 cl", "9 cl", "3 cl"],
@@ -158,6 +168,7 @@
         },{
             "strDrink": "Tequila Sunrise",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://cocktail-society.com/wp-content/uploads/2021/10/Tequila-Sunrise-Cocktail-1200.jpg",
             "strIngredients": ["Tequila", "Zumo de naranja", "Granadina"],
             "strMeasures": ["4.5 cl", "9 cl", "1.5 cl"],
@@ -179,6 +190,7 @@
         },{
             "strDrink": "San Francisco",
             "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
             "strDrinkThumb": "https://imagenes.20minutos.es/files/gallery_desktop_default_content/files/fp/uploads/imagenes/2022/11/15/san-francisco.r_d.2105-1089.jpeg",
             "strIngredients": ["Zumo de naranja", "Zumo de limón", "Zumo de piña", "Zumo de melocotón", "Granadina"],
             "strMeasures": ["15 cl", "3 cl", "6 cl", "3 cl", "3 cl"],
@@ -186,13 +198,15 @@
         },{
             "strDrink": "Tropical Love",
             "strAlcoholic": "Sin Alcohol",
-            "strDrinkThumb": "https://www.confidencial.digital/wp-content/uploads/2022/03/cocktail-gf8a698bbd_1280.jpg.webp",
+            "strNoAlcoholic": true,
+            "strDrinkThumb": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/coctel-1594418986.jpg?crop=0.89xw:1xh;center,top&resize=1200:*",
             "strIngredients": ["Zumo de maracuyá", "Zumo de cereza", "Zumo de piña", "Tónica"],
             "strMeasures": ["5 cl", "3 cl", "2 cl"],
             "strInstructions": "Echa en una coctelera los zumos y agítala hasta que quede bien mezclado. Coge un vaso y sirve la mezcla en él, añade la tónica bien fría y remueve para que quede bien combinado. Puedes decorar con unas flores o con una rodaja de piña."
         },{
             "strDrink": "Sex On The Beach virgen",
             "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
             "strDrinkThumb": "https://mocktail.net/wp-content/uploads/2022/02/Virgin-Sex-on-the-Beach_5-720x1080.jpg",
             "strIngredients": ["Zumo de melocotón", "Zumo de piña", "Zumo de naranja", "Zumo de lima"],
             "strMeasures": ["3 cl", "9 cl", "9 cl", "0.5 cl"],
@@ -200,18 +214,43 @@
         },{
             "strDrink": "Daiquiri de sandía",
             "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
             "strDrinkThumb": "https://i.pinimg.com/736x/e6/be/49/e6be495894feac75cfd2094fb1f936bb--watermelon-cocktail-non-alcoholic-drinks.jpg",
             "strIngredients": ["Pulpa de sandía", "Zumo de uva blanca", "Almíbar", "Zumo de limón"],
             "strMeasures": ["200 g", "10 cl", "4 cucharadas", "6 cl"],
             "strInstructions": "Coloca todos los ingredientes en la licuadora y procésalos a máxima potencia. Decorar con sandia."
-
         },{
             "strDrink": "Mint Tonic",
             "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
             "strDrinkThumb": "https://www.yummytemple.com/wp-content/uploads/2022/06/Non-alcoholic-mojito-cocktail-with-tonic-mint-and-lime.jpg",
             "strIngredients": ["Hojas de menta", "Almíbar", "Jarabe de menta", "Zumo de lima", "Tónica"],
             "strMeasures": ["4", "1 cl", "4 cl", "6 cl"],
             "strInstructions": "Aplasta las hojas de menta con el almíbar en un vaso alto. Añade algunos cubitos de hielo, el jarabe de menta y el zumo de limón. Remúeve bien y rellena con tónica. Vuelve a remover y decorar con unas rodajas de lima o limón y menta."
+        },{
+            "strDrink": "Banana Summer",
+            "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
+            "strDrinkThumb": "https://hips.hearstapps.com/ellees.h-cdn.co/assets/15/37/1024x1332/1024x1332--a091-6b8f39658e7etop-gourmet-cocteles-sin-alcohol-banana-summer-12711076-1-esl-es-banana-summer-jpg.jpg?resize=980:*",
+            "strIngredients": ["Plátano", "Jarabe de plátano", "Leche", "Zumo de piña", "Zumo de lima"],
+            "strMeasures": ["Medio", "1 cl", "6 cl", "6 cl", "1 cl"],
+            "strInstructions": "Tritura el plátano y añade el jarabe, la leche el zumo de piña y el jugo de lima o limón. Añade el hielo picado a la mezcla y vuelve a triturar unos segundos para que quede incorporado al cóctel. Sirve en un vaso y decora si quieres con una rodaja de limón."
+        },{
+            "strDrink": "Fresh up Exotisch",
+            "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
+            "strDrinkThumb": "https://hips.hearstapps.com/ellees.h-cdn.co/assets/15/37/1024x1332/1024x1332-8f39658e7etop-gourmet-cocteles-sin-alcohol-fresh-up-exotisch-12711098-1-esl-es-fresh-up-exotisch-jpg.jpg?resize=980:*",
+            "strIngredients": ["Rodajas de piña", "Zumo de naranja", "Granadina", "Agua mineral"],
+            "strMeasures": ["2 rodajas", "10 cl", "2 cl"],
+            "strInstructions": "Tritura la piña con una batidora de cuchillas. Mezcla la pulpa triturada con el zumo de naranja y la granadina. Sírvelo en dos copas de cóctel y rellena con agua mineral bien fría. Decora con una guinda o una frambuesa."
+        },{
+            "strDrink": "Mocktail",
+            "strAlcoholic": "Sin Alcohol",
+            "strNoAlcoholic": true,
+            "strDrinkThumb": "https://coctelia.com/wp-content/uploads/2020/07/mojito-de-fresa-coctel-768x1024.jpg",
+            "strIngredients": ["Zumo de fresa", "Jugo de menta", "Zumo de limón", "Agua con gas"],
+            "strMeasures": ["6 cl", "2 cl", "2 cl"],
+            "strInstructions": "En un vaso alto, añade el zumo de fresa, el jarabe de menta y el zumo de limón. Añade hielo y remueve bien. Rellena con agua con gas y decora con una ramita de menta."
         },{
             "strDrink": "Clover Club",
             "strAlcoholic": "Con Alcohol",
@@ -236,6 +275,7 @@
         },{
             "strDrink": "Between The Sheets",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://uncoctel.net/wp-content/uploads/2022/05/Between-the-Sheets.jpg",
             "strIngredients": ["Ron blanco", "Cognac", "Triple sec", "Jugo de limón fresco"],
             "strMeasures": ["3 cl", "3 cl", "3 cl","2cl"],
@@ -292,7 +332,7 @@
         },{
             "strDrink": "Aperol Spritz",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": false,
+            "strClassic": true,
             "strDrinkThumb": "https://hips.hearstapps.com/hmg-prod/images/aperol-spritz-recipe-1628758400.jpg?crop=1xw:0.7939308398023994xh;center,top&resize=1120:*",
             "strIngredients": ["Aperol", "Vino espumoso", "Agua con gas", "Naranja"],
             "strMeasures": ["6 cl", "8 cl", "3 cl", "Al gusto"],
@@ -300,7 +340,6 @@
         },{
             "strDrink": "Sidecar",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": true,
             "strDrinkThumb": "https://www.comedera.com/wp-content/uploads/2022/05/Sidecar-shutterstock_1401714443.jpg",
             "strIngredients": ["Brandy", "Triple Sec", "jugo de limón", "Azúcar", "Hielo"],
             "strMeasures": ["44 cl", "22 cl", "22 cl", "Al gusto", "Al gusto"],
@@ -316,7 +355,6 @@
         },{
             "strDrink": "The Last Word",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": true,
             "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/91oule1513702624.jpg",
             "strIngredients": ["Ginebra", "Licor de maraschino", "Chartreuse verde", "zumo de limón"],
             "strMeasures": ["22 cl", "22 cl", "22 cl", "22 cl"],
@@ -332,7 +370,6 @@
         },{
             "strDrink": "Pimm's Cup",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": true,
             "strDrinkThumb": "https://www.liquor.com/thmb/6r1Q8VQ0B93o87zzmU7z_cIncdg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__10__29142721__pimms-cup-720x720-recipe-e0c8e82adb6249a898be85f4136f3643.jpg",
             "strIngredients": ["Pimm's No.1", "Limón", "Pepino", "Hojas de menta", "Ginger Ale", "Hielo"],
             "strMeasures": ["25 cl", "3-4 rodajas", "3-4 rodajas", "3-4 hojas", "Al gusto", "Al gusto"],
@@ -340,7 +377,6 @@
         }, {
             "strDrink": "Sazerac",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": true,
             "strDrinkThumb": "https://media.revistagq.com/photos/5d690bb531110c00087990ca/16:9/w_2111,h_1187,c_limit/coctel%20sazerac%20sobre%20mesa%20de%20madera%20-946486670.jpg",
             "strIngredients": ["Whisky de centeno", "Absenta", "Azúcar", "Bitter de Peychaud", "Hielo"],
             "strMeasures": ["59 cl", "7 cl", "5 cl", "0.3cl a 0.6cl", "Al gusto"],
@@ -356,7 +392,7 @@
         },{
             "strDrink": "Zombie",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": false,
+            "strHardDrink": true,
             "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/2en3jk1509557725.jpg",
             "strIngredients": ["Ron blanco", "Ron oscuro", "Zumo de naranja", "Zumo de piña", "Jugo de limón", "Granadina", "Licor de plátano", "Hielo"],
             "strMeasures": ["30 cl", "30 cl", "30 cl", "30 cl", "30 cl", "22 cl", "7 cl", "Al gusto"],
@@ -364,7 +400,7 @@
         },{
             "strDrink": "Revividor de cadáveres",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": false,
+            "strHardDrink": true,
             "strDrinkThumb": "https://www.lamejorginebradelmundo.com/wp-content/uploads/2017/08/Sidecar_Cocktail.jpg",
             "strIngredients": ["Ginebra", "Cointreau", "Lillet Blanc", "jugo de limón", "Absenta", "Hielo"],
             "strMeasures": ["30 cl", "30 cl", "30 cl", "30 cl", "22 cl", "Al gusto"],
@@ -372,7 +408,7 @@
         },{
             "strDrink": "Pedrimocho",
             "strAlcoholic": "Con Alcohol",
-            "strClassic": false,
+            "strHardDrink": true,
             "strDrinkThumb": "https://images.ecestaticos.com/W_MEhc_VKCzrSoPh9I8LCWBOkpw=/389x112:2120x1413/600x450/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fec4%2F1a2%2F749%2Fec41a2749d69be887d4246bfe0d93701.jpg",
             "strIngredients": ["Ginebra", "Ron", "Whisky", "Fanta de Naranja", "Coca-Cola", "7up", "Hielo"],
             "strMeasures": ["30 cl", "30 cl", "30 cl", "Al gusto", "Al gusto", "Al gusto", "Al gusto"],
