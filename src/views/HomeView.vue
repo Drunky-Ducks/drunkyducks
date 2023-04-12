@@ -49,39 +49,4 @@ export default {
 </template>
 
 <style scoped>
-@media screen and (max-width: 320px) {
-  .swiper {
-    slidesPerView: 2,
-    spaceBetween: 20
-  }
-
-  .info {
-    font-size: 12px;
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .swiper {
-    slidesPerView: 3,
-    spaceBetween: 30
-  }
-
-  .info {
-    font-size: 12px;
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .swiper {
-    slidesPerView: 4,
-    spaceBetween: 40
-  }
-
-  .info {
-    font-size: 12px;
-    width: auto;
-  }
-}
 </style>
