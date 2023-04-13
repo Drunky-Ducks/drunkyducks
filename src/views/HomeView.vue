@@ -5,6 +5,7 @@ import CocktailDetails from '../components/CocktailDetails.vue';
 import Swiper from '../components/Swiper.vue';
 // eslint-disable-next-line no-unused-vars
 import Swipercss from "../assets/swiper.css";
+import 'swiper/swiper-bundle.css';
 
 
 export default {
@@ -48,5 +49,5 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style>
 </style>
