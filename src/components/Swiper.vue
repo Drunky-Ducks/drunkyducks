@@ -1,8 +1,31 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <h1>{{ this.title }}</h1>
-  <swiper :slidesPerView="4" :breakpoints="swiperOptions.breakpoints" :navigation="true" :modules="modules" :loop="true"
-    class="mySwiper">
+  <swiper :slidesPerView="1" :spaceBetween="10" :navigation="false" :modules="modules" :loop="true" :autoplay="{
+    delay: 3000,
+    disableOnInteraction: false,
+  }" :breakpoints="{
+  '520': {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  '640': {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  '768': {
+    slidesPerView: 2,
+    spaceBetween: 30,
+  },
+  '1024': {
+    slidesPerView: 3,
+    spaceBetween: 40,
+  },
+  '1440': {
+    slidesPerView: 4,
+    spaceBetween: 40,
+  },
+}" class="mySwiper">
     <swiper-slide v-for="(cocktail, index) in cocktails" :key="index">
       <CardMinimal :cocktail="cocktail"></CardMinimal>
     </swiper-slide>
@@ -17,37 +40,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation } from 'swiper';
+import { Navigation, Autoplay } from 'swiper';
 
 export default {
   components: {
     Swiper, SwiperSlide, CardMinimal,
   },
-  data() {
-    return {
-      swiperOptions: {
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10
-          },
-          770: {
-            slidesPerView: 2,
-            spaceBetween: 50
-          },
-
-          771: {
-            slidesPerView: 4,
-            spaceBetween: 30
-          }
-        }
-      }
-    }
-  },
   setup() {
     return {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
     };
   },
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    cocktails: {
+      type: Array,
+      default: () => [],
+    },
+  }
 };
 </script>

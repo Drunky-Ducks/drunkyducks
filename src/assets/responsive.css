@@ -1,5 +1,43 @@
 /* Estilo pantalla móvil peuqeña */
 @media screen and (max-width: 320px) {
+  .title-logo h1 {
+    font-size: 2rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developed span {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-logo h1 {
+      font-size: 3rem;
+  }
+  .tag {
+    min-width: 90%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developed span {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .title-logo h1 {
+    font-size: 6rem;
+  }
   .tag {
     min-width: 90%;
   }
@@ -64,35 +102,4 @@
   }
 }
 
-@media screen and (min-width: 450px) and (max-width: 767px) {
-  .title-logo h1 {
-    font-size: 6rem;
-  }
-}
 
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 450px) {
-  .title-logo h1 {
-    font-size: 3.5rem;
-  }
-
-  .tittle {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .title-logo h1 {
-    font-size: 3rem;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .developed span {
-    text-align: center;
-  }
-}

@@ -77,7 +77,6 @@
         },{
             "strDrink": "Cosmopolitan",
             "strAlcoholic": "Con Alcohol",
-            "strHardDrink": true,
             "strDrinkThumb": "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/05/COSMOPOLITAN.jpg",
             "strIngredients": ["Vodka", "Cointreau", "Zumo de lima", "Zumo de arándano"],
             "strMeasures": ["4 cl", "1.5 cl", "1.5 cl", "3 cl"],
@@ -108,6 +107,7 @@
         },{
             "strDrink": "Bloody Mary",
             "strAlcoholic": "Con Alcohol",
+            "strHardDrink": true,
             "strDrinkThumb": "https://static01.nyt.com/images/2020/05/17/magazine/17mag-eat/17mag-eat-articleLarge.jpg",
             "strIngredients": ["Vodka", "Zumo de tomate", "Zumo de limón", "Salsa perrins", "Tabasco", "Sal de apio", "Pimienta", "Apio"],
             "strMeasures": ["4 cl", "9 cl", "1.5 cl", "3 gotas", "2 gotas", "1 pizca", "1 toque", "1 rama"],
