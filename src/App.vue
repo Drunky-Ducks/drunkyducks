@@ -47,8 +47,12 @@ export default {
       <h1>Drunky<span>Ducks</span></h1>
     </div>
     <div class='theme-button-wrapper'>
-      <button v-if="isLight" @click=toggleMode> 🌙 </button>
-      <button v-else @click=toggleMode> 😎 </button>
+      <button v-if="isLight" @click=toggleMode>
+        <img src="media/dark-duck.png" class="icon-mode" />
+      </button>
+      <button v-else @click=toggleMode>
+        <img src="media/light-duck.png" class="icon-mode" />
+      </button>
     </div>
   </header>
   <div class="container" :class="{ 'light-mode': isLight }">
