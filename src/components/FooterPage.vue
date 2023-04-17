@@ -30,8 +30,8 @@ export default {
 <style>
 footer {
   border-top: 5px solid #ffc300;
-  background: #292929;
-  color: #fff;
+  background: var(--clr-base-bg);
+  color: var(--clr-base-txt);
   width: 100%;
   display: grid;
   padding: 10px;

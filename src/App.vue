@@ -23,14 +23,13 @@ export default {
   },
   beforeMount() {
     this.showModal = localStorage.overage === "true"
+    this.isLight = JSON.parse(localStorage.getItem("isLight"))
   },
   watch: {
     isLight: function () {
       localStorage.setItem("isLight", JSON.stringify(this.isLight));
+      document.body.classList = this.isLight ? "light-mode": "dark-mode"
     }
-  },
-  created() {
-    this.isLight = JSON.parse(localStorage.getItem("isLight"));
   },
   methods: {
     hiddenModal() {
@@ -43,32 +42,32 @@ export default {
 }
 </script>
 
-<template >
+<template>
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
   <Navbar></Navbar>
-  <header :class="{ 'light-mode': isLight }">
+  <header>
     <div class="title-logo">
       <h1>Drunky<span>Ducks</span></h1>
     </div>
     <div class='theme-button-wrapper'>
       <button v-if="isLight" @click=toggleMode>
-        <img src="media/dark-duck.png" class="icon-mode" />
+        <img src="/media/light-duck.png" class="icon-mode" />
       </button>
       <button v-else @click=toggleMode>
-        <img src="media/light-duck.png" class="icon-mode" />
+        <img src="/media/dark-duck.png" class="icon-mode" />
       </button>
     </div>
   </header>
-  <div class="container" :class="{ 'light-mode': isLight }">
+  <div>
     <RouterView />
   </div>
-  <FooterPage :class="{ 'light-mode': isLight }" />
+  <FooterPage />
 </template>
 
 <style scoped>
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--clr-base-bg);
+  color: var(--clr-base-txt);
   text-align: center;
   padding: 50px 5px;
 }
@@ -96,7 +95,7 @@ header {
 
 .container {
   flex: 1;
-  margin: 7px;
+  margin: 20px 5px;
 }
 
 .theme-button-wrapper {
