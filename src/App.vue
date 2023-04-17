@@ -8,7 +8,8 @@ export default {
   },
   data: () => {
     return {
-      showModal: false
+      showModal: false,
+      isLight: false
     }
   },
   computed: {
@@ -19,37 +20,48 @@ export default {
   beforeMount() {
     this.showModal = localStorage.overage === "true"
   },
+  watch: {
+    isLight: function () {
+      localStorage.setItem("isLight", JSON.stringify(this.isLight));
+    }
+  },
+  created() {
+    this.isLight = JSON.parse(localStorage.getItem("isLight"));
+  },
   methods: {
     hiddenModal() {
       this.showModal = true;
+    },
+    toggleMode() {
+      this.isLight = !this.isLight;
     }
   }
 }
 </script>
 
-<template>
+<template >
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
 
-  <header>
+  <header :class="{ 'light-mode': isLight }">
     <div class="title-logo">
       <h1>Drunky<span>Ducks</span></h1>
     </div>
+    <div class='theme-button-wrapper'>
+      <button v-if="isLight" @click=toggleMode>
+        <img src="media/dark-duck.png" class="icon-mode" />
+      </button>
+      <button v-else @click=toggleMode>
+        <img src="media/light-duck.png" class="icon-mode" />
+      </button>
+    </div>
   </header>
-  <div class="container">
-    <RouterView></RouterView>
+  <div class="container" :class="{ 'light-mode': isLight }">
+    <RouterView />
   </div>
-  <FooterPage></FooterPage>
+  <FooterPage :class="{ 'light-mode': isLight }" />
 </template>
 
 <style scoped>
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 50px 5px;
-}
-
 .title-logo {
   display: flex;
   justify-content: center;
@@ -73,5 +85,20 @@ header {
 
 .container {
   flex: 1;
+}
+
+.theme-button-wrapper {
+  display: flex;
+  justify-content: end;
+  transition: all 1s;
+  margin-right: 10%;
+}
+
+.theme-button-wrapper button {
+  background-color: gray;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5%;
+  font-size: 150%;
 }
 </style>

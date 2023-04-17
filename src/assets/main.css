@@ -1,5 +1,5 @@
-@import url("./responsive.css");
-@import url("./swiper.css");
+@import url('./responsive.css');
+@import url('./swiper.css');
 
 * {
   margin: 0;
@@ -9,17 +9,17 @@
 
 :root {
   --clr-base-bg: #333;
-  --clr-base-txt: #fff
+  --clr-base-txt: #fff;
 }
 
 @font-face {
   font-family: Cheri;
-  src: url("/font/CHERI___.TTF");
+  src: url('/font/CHERI___.TTF');
 }
 
 @font-face {
   font-family: DuruSans;
-  src: url("/font/DuruSans-Regular.ttf");
+  src: url('/font/DuruSans-Regular.ttf');
 }
 
 html,
@@ -39,4 +39,31 @@ body {
   font-weight: normal;
   display: flex;
   flex-direction: column;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 50px 5px;
+}
+
+/* Light Mode Theme */
+.light-mode {
+  background-color: #f2e3db;
+  color: black;
+  transition: all 0.5s;
+}
+
+.theme-button-wrapper button {
+  box-shadow: 0 0 5px black;
+}
+
+.icon-mode {
+  width: 50px;
+}
+
+/* Iconos del footer */
+.light-mode .icon {
+  color: black;
 }
