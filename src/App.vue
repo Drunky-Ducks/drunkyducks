@@ -79,6 +79,7 @@ header {
   align-items: center;
   text-shadow: 2px 2px 10px black;
   font-family: Cheri, fantasy;
+  margin-top: 35px;
 }
 
 .title-logo a {

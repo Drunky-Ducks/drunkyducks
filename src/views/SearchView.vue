@@ -37,7 +37,7 @@ export default {
   <div>
     <SearchCocktails @fillResult="fillResult"></SearchCocktails>
     <div class="container">
-      <div class="tittle animate__animated animate__fadeInDown animate__delay-10">Cócteles</div>
+      <div class="tittle animate__animated animate__fadeInDown animate__delay-10">CÓCTELES</div>
       <div class="list">
         <NotFound v-if="!searchOcurrence.length"></NotFound>
         <CardMinimal v-for="(value, index) in searchOcurrence" :key="index" :cocktail="value"></CardMinimal>
@@ -57,7 +57,7 @@ export default {
 }
 
 .tittle {
-  color: #ffc300;;
+  color: #ffc300;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
