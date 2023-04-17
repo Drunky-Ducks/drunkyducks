@@ -53,7 +53,7 @@ export default {
   width: 80%;
   max-width: 800px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .search-input {
@@ -81,4 +81,9 @@ export default {
   background-color: #454545;
 }
 
+@media screen and (max-width: 576px) {
+  .search-input {
+    max-width: 80%;
+  }
+}
 </style>

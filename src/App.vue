@@ -70,7 +70,7 @@ header {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 50px 5px;
+  padding: 30px 5px;
 }
 
 .title-logo {
@@ -104,6 +104,7 @@ header {
   justify-content: end;
   transition: all 1s;
   margin-right: 10%;
+  align-items: center;
 }
 
 .theme-button-wrapper button {
@@ -112,5 +113,18 @@ header {
   border-radius: 50%;
   padding: 0.5%;
   font-size: 150%;
+}
+
+@media screen and (max-width: 576px) {
+  .theme-button-wrapper {
+    margin-top: 2rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .theme-button-wrapper {
+    margin-top: 3rem;
+  }
 }
 </style>
