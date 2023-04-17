@@ -1,10 +1,14 @@
 <script>
 import { RouterView } from 'vue-router';
+
 import FooterPage from './components/FooterPage.vue';
 import ModalAge from './components/ModalAge.vue';
+import Navbar from './components/Navbar/Navbar.vue';
+
 export default {
   components: {
-    ModalAge, FooterPage, RouterView
+    ModalAge, FooterPage, Navbar,
+    RouterView
   },
   data: () => {
     return {
@@ -29,7 +33,7 @@ export default {
 
 <template>
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
-
+  <Navbar></Navbar>
   <header>
     <div class="title-logo">
       <h1>Drunky<span>Ducks</span></h1>
@@ -42,7 +46,6 @@ export default {
 </template>
 
 <style scoped>
-
 header {
   background-color: #333;
   color: #fff;
@@ -73,5 +76,6 @@ header {
 
 .container {
   flex: 1;
+  margin: 7px;
 }
 </style>
