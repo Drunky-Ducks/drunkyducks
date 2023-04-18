@@ -3,6 +3,9 @@
   .title-logo h1 {
     font-size: 2rem;
   }
+  .tittle{
+    font-size: 2rem;
+  }
   .container{
     width: 70%;
     font-size: 1rem;
@@ -21,7 +24,10 @@
 
 @media screen and (max-width: 576px) {
   .title-logo h1 {
-      font-size: 3rem;
+      font-size: 4rem;
+  }
+  .tittle{
+    font-size: 2rem;
   }
   .container{
     font-size: 1rem;
@@ -46,6 +52,9 @@
   .title-logo h1 {
     font-size: 6rem;
   }
+  .tittle{
+    font-size: 3rem;
+  }
   .tag {
     min-width: 90%;
   }
@@ -65,8 +74,11 @@
 @media screen and (min-width: 768px) {
   .title-logo h1 {
     font-size: 6rem;
+    margin-top:5rem;
   }
-
+  .tittle{
+    font-size: 3rem;
+  }
   .container {
     gap: 2rem;
   }

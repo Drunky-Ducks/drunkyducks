@@ -10,16 +10,10 @@ export default {
 
 <template>
   <div class="desktop navbar">
-    <div class="nav-item">
-      <RouterLink to="/">Inicio</RouterLink>
+     <RouterLink class="nav-item" to="/">INICIO</RouterLink>
+      <RouterLink class="nav-item" to="/search">BUSCADOR</RouterLink>
+      <RouterLink class="nav-item" to="/juegos">JUEGOS</RouterLink>
     </div>
-    <div class="nav-item">
-      <RouterLink to="/search">Buscador</RouterLink>
-    </div>
-    <div class="nav-item">
-      <RouterLink to="/juegos">Juegos</RouterLink>
-    </div>
-  </div>
 </template>
 
 <style>
@@ -28,5 +22,6 @@ export default {
   width: 100%;
   top: 0;
   background-color: rgb(116, 116, 116);
+  height: 4rem;
 }
 </style>

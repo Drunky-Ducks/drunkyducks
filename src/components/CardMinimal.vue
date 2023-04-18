@@ -26,7 +26,6 @@ export default {
       <img :src="cocktail.strDrinkThumb" :alt="getAlt()">
       <div class="info">
         <h1>{{ cocktail.strDrink }}</h1>
-        <span>ℹ</span>
       </div>
     </RouterLink>
   </div>
@@ -62,7 +61,7 @@ img {
 .info {
   width: 80%;
   background: #202124;
-  border: 5px solid #40bfc1;
+  border: 5px solid #40bfc1 ;
   color: #FFC300;
   border-radius: 7px;
   display: flex;

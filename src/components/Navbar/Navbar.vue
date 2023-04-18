@@ -44,12 +44,15 @@ export default {
   width: 100%;
   background-color: #131313;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2rem;
   padding: 10px;
+  display: grid;
+  place-content: center;
+  font-family: DynaPuff-Regular;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffc300;
 }
 </style>
