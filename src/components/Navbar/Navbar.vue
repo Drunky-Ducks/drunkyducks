@@ -1,23 +1,24 @@
 <script>
-import MobileNav from "./MobileNav.vue"
-import DesktopNav from "./DesktopNav.vue";
+import MobileNav from './MobileNav.vue'
+import DesktopNav from './DesktopNav.vue'
 
 export default {
-  name: "NavBar",
+  name: 'NavBar',
   components: {
-    MobileNav, DesktopNav
+    MobileNav,
+    DesktopNav
   },
   data() {
     return {
-      isMobileSize: ""
-    };
+      isMobileSize: ''
+    }
   },
   beforeMount() {
     this.isMobileSize = document.documentElement.clientWidth < 500
-    window.addEventListener('resize', this.changeContent);
+    window.addEventListener('resize', this.changeContent)
   },
   unmounted() {
-    window.removeEventListener('resize', this.changeContent);
+    window.removeEventListener('resize', this.changeContent)
   },
   methods: {
     changeContent() {
