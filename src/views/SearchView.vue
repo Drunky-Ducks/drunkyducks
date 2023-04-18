@@ -16,9 +16,7 @@ export default {
     SearchCocktails, CardMinimal, NotFound
   },
   beforeMount() {
-    for(let i = 0; i < 10; i++) {
-      this.searchOcurrence.push(cocktails.drinks[i])
-    }
+    this.defaultCocktails()
   },
   computed: {
     getOcurrence() {
@@ -27,7 +25,19 @@ export default {
   },
   methods: {
     fillResult(result) {
-      this.searchOcurrence = result
+      if(result === "") {
+        this.defaultCocktails()
+      } else {
+        this.searchOcurrence = result
+      }
+    },
+    defaultCocktails() {
+      const defaults = []
+      for (let i = 0; i < 10; i++) {
+        defaults.push(cocktails.drinks[i])
+      }
+
+      this.searchOcurrence = [...defaults]
     }
   }
 }

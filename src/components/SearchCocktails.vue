@@ -13,14 +13,18 @@ export default {
   },
   methods: {
     searchCocktail({ target }) {
-      const result = []
+      let result = []
+      
+      if(target.name.value === "") {
+        result = ""
+      } else {
+        const cocktail = target.name.value.toLowerCase()
 
-      const cocktail = target.name.value.toLowerCase()
-
-      for (const nameCocktail of cocktails.drinks) {
-        const name = nameCocktail.strDrink.toLowerCase();
-        if (name.startsWith(cocktail)) {
-          result.push(nameCocktail)
+        for (const nameCocktail of cocktails.drinks) {
+          const name = nameCocktail.strDrink.toLowerCase();
+          if (name.startsWith(cocktail)) {
+            result.push(nameCocktail)
+          }
         }
       }
 
