@@ -19,6 +19,9 @@ export default {
   computed: {
     isShowModal() {
       return !this.showModal
+    },
+    getURL() {
+      return this.isLight ? "/media/light-duck.png" : "/media/dark-duck.png"
     }
   },
   beforeMount() {
@@ -50,11 +53,8 @@ export default {
       <h1>Drunky<span>Ducks</span></h1>
     </div>
     <div class='theme-button-wrapper'>
-      <button v-if="isLight" @click=toggleMode>
-        <img src="/media/light-duck.png" class="icon-mode" />
-      </button>
-      <button v-else @click=toggleMode>
-        <img src="/media/dark-duck.png" class="icon-mode" />
+      <button @click=toggleMode>
+        <img :src="getURL" class="icon-mode" />
       </button>
     </div>
   </header>
