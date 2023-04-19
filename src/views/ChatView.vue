@@ -106,7 +106,7 @@ export default {
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
   gap: 10px;
 }
 

@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="desktop navbar">
     <RouterLink class="nav-item" to="/">INICIO</RouterLink>
-    <RouterLink class="nav-item" to="/search">BUSCADOR</RouterLink>
+    <RouterLink class="nav-item" to="/buscador">BUSCADOR</RouterLink>
     <RouterLink class="nav-item" to="/juegos">JUEGOS</RouterLink>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
   .nav-item:hover {
     color: #40bfc1;
     border-bottom: #40bfc1 3px solid;
-    transform: scale(1.1);
+    font-size: 2.4rem;
   }
 }
 </style>

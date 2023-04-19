@@ -24,7 +24,7 @@
 
 @media screen and (max-width: 576px) {
   .title-logo h1 {
-      font-size: 4rem;
+      font-size: 3.4rem;
   }
   .tittle{
     font-size: 2rem;
@@ -32,7 +32,7 @@
   .container{
     font-size: 1rem;
   }
-  
+
   .tag {
     min-width: 90%;
   }

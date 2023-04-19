@@ -12,7 +12,7 @@ export default {
       <RouterLink to="/">🏠</RouterLink>
     </div>
     <div class="nav-item">
-      <RouterLink to="/search">🔍</RouterLink>
+      <RouterLink to="/buscador">🔍</RouterLink>
     </div>
     <div class="nav-item">
       <RouterLink to="/juegos">🎮</RouterLink>

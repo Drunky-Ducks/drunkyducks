@@ -20,7 +20,7 @@ export default {
 
 <template>
   <div class="container">
-    <RouterLink class="card-minimal" :to="`/details/${cocktail.strDrink}`">
+    <RouterLink class="card-minimal" :to="`/detalles/${cocktail.strDrink}`">
       <img :src="cocktail.strDrinkThumb" :alt="getAlt()" />
       <div class="info">
         <h1>{{ cocktail.strDrink }}</h1>

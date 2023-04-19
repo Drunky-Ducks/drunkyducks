@@ -4,16 +4,18 @@ import { RouterView } from 'vue-router';
 import FooterPage from './components/FooterPage.vue';
 import ModalAge from './components/ModalAge.vue';
 import Navbar from './components/Navbar/Navbar.vue';
+import ChatHelp from './components/ChatHelp.vue';
 
 export default {
   components: {
-    ModalAge, FooterPage, Navbar,
+    ModalAge, FooterPage, Navbar, ChatHelp,
     RouterView
   },
   data: () => {
     return {
       showModal: false,
-      isLight: false
+      isLight: false,
+      showPopUp: true
     }
   },
   computed: {
@@ -27,6 +29,10 @@ export default {
   watch: {
     isLight: function () {
       localStorage.setItem("isLight", JSON.stringify(this.isLight));
+    },
+    $route (to) {
+      const { fullPath: actualPath} = to
+      this.showPopUp = actualPath !== '/chat'
     }
   },
   created() {
@@ -46,6 +52,7 @@ export default {
 <template >
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
   <Navbar></Navbar>
+  <ChatHelp v-if="showPopUp"></ChatHelp>
   <header :class="{ 'light-mode': isLight }">
     <div class="title-logo animate__animated animate__fadeInDown animate__delay-10">
       <h1>Drunky<span>Ducks</span></h1>
