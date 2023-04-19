@@ -1,8 +1,8 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
-export const handler = async (event) => {
+const handler = async (event) => {
     try {
-        console.log(event);
+        console.log(process.env.VITE_API_KEY);
         // eslint-disable-next-line no-undef
         const apiToken = process.env.VITE_API_KEY;
         const message = event.queryStringParameters;
@@ -41,3 +41,5 @@ export const handler = async (event) => {
         };
   }
 };
+
+module.exports = {handler}
