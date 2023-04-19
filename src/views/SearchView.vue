@@ -16,9 +16,7 @@ export default {
     SearchCocktails, CardMinimal, NotFound
   },
   beforeMount() {
-    for(let i = 0; i < 10; i++) {
-      this.searchOcurrence.push(cocktails.drinks[i])
-    }
+    this.defaultCocktails()
   },
   computed: {
     getOcurrence() {
@@ -27,7 +25,19 @@ export default {
   },
   methods: {
     fillResult(result) {
-      this.searchOcurrence = result
+      if(result === "") {
+        this.defaultCocktails()
+      } else {
+        this.searchOcurrence = result
+      }
+    },
+    defaultCocktails() {
+      const defaults = []
+      for (let i = 0; i < 10; i++) {
+        defaults.push(cocktails.drinks[i])
+      }
+
+      this.searchOcurrence = [...defaults]
     }
   }
 }
@@ -37,7 +47,7 @@ export default {
   <div>
     <SearchCocktails @fillResult="fillResult"></SearchCocktails>
     <div class="container">
-      <div class="tittle animate__animated animate__fadeInDown animate__delay-10">Cócteles</div>
+      <div class="tittle animate__animated animate__fadeInDown animate__delay-10">CÓCTELES</div>
       <div class="list">
         <NotFound v-if="!searchOcurrence.length"></NotFound>
         <CardMinimal v-for="(value, index) in searchOcurrence" :key="index" :cocktail="value"></CardMinimal>
@@ -57,7 +67,7 @@ export default {
 }
 
 .tittle {
-  color: #ffc300;;
+  color: #ffc300;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
