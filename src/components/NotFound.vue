@@ -32,7 +32,7 @@ export default {
 }
 
 .error {
-  color: #ffc300;
+  color: var(--clr-primary);
   font-size: 2rem;
   text-align: center;
 }

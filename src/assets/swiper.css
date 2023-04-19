@@ -9,7 +9,7 @@
   justify-content: center;
   font-family:DynaPuff-Regular;
   font-size: 1.8rem;
-  color: #ffc300;
+  color: var(--clr-primary);
 }
 .container{
   margin-bottom: 60px;

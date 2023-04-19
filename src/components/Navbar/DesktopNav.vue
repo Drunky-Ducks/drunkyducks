@@ -25,13 +25,15 @@ export default {
   box-shadow: -1px 8px 17px 2px rgba(0, 0, 0, 0.48);
   background-color: #131313;
 }
+
 @media screen and (min-width: 900px) {
   .nav-item {
     transition: all 0.3s ease-in-out;
   }
+
   .nav-item:hover {
-    color: #40bfc1;
-    border-bottom: #40bfc1 3px solid;
+    color: var(--clr-secondary);
+    border-bottom: var(--clr-secondary) 3px solid;
     font-size: 2.4rem;
   }
 }

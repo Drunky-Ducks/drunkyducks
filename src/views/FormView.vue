@@ -33,19 +33,19 @@ export default {
     form {
         width: 84vw;
         height: 50vh;
-        background-color: #333;
+        background-color: var(--clr-base-bg);
         display: grid;
         grid-template-rows: 0.3fr 1.2fr 0.5fr;
         gap: 30px;
     }
 
     h1 {
-        color: #FFC300;
+        color: var(--clr-primary);
         align-self: center;
         text-align: center;
         font-weight: 700;
-        font-size: 20px;
-        text-shadow: 0 0 10px black;
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px black;
         font-family: DynaPuff-Regular;
     }
 
@@ -64,6 +64,7 @@ export default {
         font-size: 16px;
         box-shadow: 0 0 2px #f5f5f5;
         font-family: Durusans, monospace;
+        border-radius: 15px;
 
     }
 
@@ -75,7 +76,7 @@ export default {
     form button {
         width: 100px;
         padding: 10px;
-        background-color: #FFC300;
+        background-color: var(--clr-primary);
         color: black;
         border: none;
         border-radius: 15px;
@@ -105,7 +106,7 @@ export default {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     input,
@@ -116,13 +117,17 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
     form {
         width: 50vw;
         gap: 10px;
     }
 
     form button:active {
-        box-shadow: 0 0 10px #FFC300;
+        box-shadow: 0 0 10px var(--clr-primary);
         transform: scale(0.95);
         transition: all 0.2s ease-out;
     }
@@ -135,29 +140,12 @@ export default {
 }
 
 @media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 3rem;
+    }
+
     form {
         width: 35vw;
-    }
-}
-
-@media screen and (min-width: 2560px) {
-    form {
-        width: 20vw;
-        height: 50vh;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    input,
-    textarea {
-        padding: 20px;
-        font-size: 24px;
-    }
-
-    textarea {
-        height: 300px;
     }
 }
 </style>

@@ -54,6 +54,6 @@ export default {
 
 a {
   text-decoration: none;
-  color: #ffc300;
+  color: var(--clr-primary);
 }
 </style>

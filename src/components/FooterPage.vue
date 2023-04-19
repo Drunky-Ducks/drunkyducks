@@ -12,24 +12,29 @@ export default {
 </script>
 
 <template>
-    <footer class="footer">
-      <div class="social-container">
-        <div class="icon-container">
-          <a class='icon instagram' href="https://www.instagram.com/drunkyducks/"
-            aria-label="Link to us Instagram page"><InstagramIcon></InstagramIcon></a>
-          <a class='icon twitter' href="https://twitter.com/DrunkyDucks " aria-label="Link to us Twitter page"><TwitterIcon></TwitterIcon></a>
-          <a class='icon email' href=mailto:drunkyducks@gmail.com aria-label="Send a message to us"><EmailIcon></EmailIcon></a>
-        </div>
+  <footer class="footer">
+    <div class="social-container">
+      <div class="icon-container">
+        <a class='icon instagram' href="https://www.instagram.com/drunkyducks/" aria-label="Link to us Instagram page">
+          <InstagramIcon></InstagramIcon>
+        </a>
+        <a class='icon twitter' href="https://twitter.com/DrunkyDucks " aria-label="Link to us Twitter page">
+          <TwitterIcon></TwitterIcon>
+        </a>
+        <a class='icon email' href=mailto:drunkyducks@gmail.com aria-label="Send a message to us">
+          <EmailIcon></EmailIcon>
+        </a>
       </div>
-      <div class="developed">
-        <span>Desarrollado por Drapper Drake ©</span>
-      </div>
-    </footer>
+    </div>
+    <div class="developed">
+      <span>Desarrollado por Drapper Drake ©</span>
+    </div>
+  </footer>
 </template>
 
 <style>
 footer {
-  border-top: 5px solid #ffc300;
+  border-top: 5px solid var(--clr-primary);
   background: var(--clr-base-bg);
   color: var(--clr-base-txt);
   width: 100%;
@@ -55,7 +60,7 @@ footer {
 
 .icon {
   font-size: 1em;
-  color: #fff;
+  color: var(--clr-base-txt);
   text-decoration: none;
   width: 2em;
   height: 2em;

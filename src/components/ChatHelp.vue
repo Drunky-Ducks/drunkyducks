@@ -23,7 +23,7 @@ export default {
   bottom: 70px;
   right: 10px;
   z-index: 3;
-  background-color: #3fbdbf;
+  background-color: var(--clr-secondary);
   color: var(--clr-base-bg);
   font-size: 2rem;
   font-weight: 900;

@@ -10,11 +10,15 @@
 .dark-mode {
   --clr-base-bg: #333;
   --clr-base-txt: #eee;
+  --clr-primary: #f6c343;
+  --clr-secondary: #40bfc1;
 }
 
 .light-mode {
   --clr-base-bg: #eee;
   --clr-base-txt: #333;
+  --clr-primary: #e48f2f;
+  --clr-secondary: #066e6f;
 }
 
 @font-face {
@@ -47,18 +51,4 @@ body {
   font-weight: normal;
   display: flex;
   flex-direction: column;
-}
-
-/* Light Mode Theme */
-.theme-button-wrapper button {
-  box-shadow: 0 0 5px black;
-}
-
-.icon-mode {
-  width: 50px;
-}
-
-/* Iconos del footer */
-.light-mode .icon {
-  color: black;
 }

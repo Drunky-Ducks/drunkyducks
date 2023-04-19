@@ -45,15 +45,15 @@ export default {
   display: flex;
   align-items: center;
   padding: 10px;
-  border-top: 3px solid #40bfc1;
-  border-bottom: 3px solid #ffc300;
+  border-top: 3px solid var(--clr-secondary);
+  border-bottom: 3px solid var(--clr-primary);
   box-shadow: #00000082 0 15px 30px;
   padding: 3rem 0;
 }
 
 h1 {
   font-size: 3.5rem;
-  color: #ffc300;
+  color: var(--clr-primary);
   margin-bottom: 10px;
   font-family: DynaPuff-Regular;
 }
@@ -63,7 +63,7 @@ h2 {
 }
 
 h3 {
-  color: #40bfc1;
+  color: var(--clr-secondary);
   font-size: 1.8rem;
   margin-bottom: 10px;
   font-family: DynaPuff-Regular;
@@ -90,6 +90,7 @@ ul {
 p {
   text-align: center;
 }
+
 .info-cocktail {
   display: flex;
   flex-direction: column;
@@ -107,6 +108,7 @@ p {
   picture {
     width: 30%;
   }
+
   .info-cocktail {
     width: 50%;
   }
@@ -120,6 +122,7 @@ p {
     gap: 30px;
     padding: 3rem;
   }
+
   picture {
     width: 70%;
   }

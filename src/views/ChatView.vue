@@ -127,7 +127,7 @@ input[type="text"] {
 button[type="submit"] {
   padding: 10px;
   font-size: 16px;
-  background-color: #f6c343;
+  background-color: var(--clr-primary);
   color: black;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -135,20 +135,20 @@ button[type="submit"] {
 }
 
 .received {
-  background-color: #40bfc1;
+  background-color: var(--clr-secondary);
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 5px;
   max-width: 80%;
   align-self: flex-start;
-  color: black;
+  color: var(--clr-base-bg);
 
   margin-right: auto;
   margin-left: 0;
 }
 
 .sent {
-  background-color: #f6c343;
+  background-color: var(--clr-primary);
   color: black;
   border-radius: 10px;
   padding: 10px;

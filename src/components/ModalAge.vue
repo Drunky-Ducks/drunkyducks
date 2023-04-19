@@ -38,7 +38,7 @@ export default {
   width: 100%;
   height: 100%;
   background: #2b373d;
-  z-index: 3;
+  z-index: 4;
 }
 
 .container {
@@ -52,7 +52,7 @@ export default {
 }
 
 .line-hr {
-  background: #ffc300;
+  background: var(--clr-primary);
   width: 80%;
   height: 5px;
 }
@@ -69,7 +69,7 @@ export default {
 }
 
 .modal h1 span:first-child {
-  color: #40bfc1;
+  color: var(--clr-secondary);
 }
 
 .modal h2 {

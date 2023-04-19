@@ -13,7 +13,7 @@ export default {
     getAlt: function () {
       return `cocktail ${this.cocktail.strDrink.toLowerCase()} image`
     },
-    goDetails() {}
+    goDetails() { }
   }
 }
 </script>
@@ -33,7 +33,6 @@ export default {
 .container {
   max-width: 400px;
   text-align: center;
-  /* filter: drop-shadow(2px 2px 5px black) drop-shadow(-2px -2px 5px black) */
 }
 
 a {
@@ -47,27 +46,22 @@ a {
 
 img {
   position: relative;
-  /* bottom: -15px; */
   width: 80%;
   aspect-ratio: 1/1;
   border-radius: 10px 10px 0 0;
-  /* border-radius: 50%;
-  border: 5px solid #40bfc1; */
-  /* box-shadow: 2px 2px 5px black, -2px -2px 5px black; */
   z-index: 1;
   margin-top: 5rem;
   box-shadow: 1px 3px 29px 2px rgba(0, 0, 0, 0.66);
-  border-top: #ffc300 5px inset;
-  border-right: #ffc300 5px inset;
-  border-left: #ffc300 5px inset;
+  border-top: var(--clr-primary) 5px inset;
+  border-right: var(--clr-primary) 5px inset;
+  border-left: var(--clr-primary) 5px inset;
 }
 
 .info {
   width: 80%;
   background: #202124;
   height: 8rem;
-  /* border: 5px solid #40bfc1 ; */
-  color: #ffc300;
+  color: var(--clr-primary);
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: center;
@@ -75,9 +69,9 @@ img {
   gap: 10px;
   padding: 20px;
   box-shadow: 1px 3px 29px 2px rgba(0, 0, 0, 0.66);
-  border-bottom: #40bfc1 5px outset;
-  border-right: #40bfc1 5px outset;
-  border-left: #40bfc1 5px outset;
+  border-bottom: var(--clr-secondary) 5px outset;
+  border-right: var(--clr-secondary) 5px outset;
+  border-left: var(--clr-secondary) 5px outset;
 }
 
 h1 {
@@ -88,6 +82,7 @@ h1 {
   .card-minimal {
     transition: all 0.5s ease-in-out;
   }
+
   .card-minimal:hover {
     transform: scale(1.1);
   }

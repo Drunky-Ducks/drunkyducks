@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     fillResult(result) {
-      if(result === "") {
+      if (result === "") {
         this.defaultCocktails()
       } else {
         this.searchOcurrence = result
@@ -57,7 +57,7 @@ export default {
 </template>
 
 <style scoped>
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +67,7 @@ export default {
 }
 
 .tittle {
-  color: #ffc300;
+  color: var(--clr-primary);
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
