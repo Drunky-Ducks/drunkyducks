@@ -1,89 +1,105 @@
-  <template>
-    <div class="chat-box">
+
+<template>
+  <div class="chat-container">
+    <div class="chat-box" ref="chatBox">
       <div v-for="message in messages" :key="message.id">
         <p v-if="message.isReceived" class="received">{{ message.text }}</p>
         <p v-else class="sent">{{ message.text }}</p>
       </div>
+    </div>
+    <div class="form">
       <form @submit.prevent="sendMessage">
         <input type="text" v-model="newMessage" placeholder="Hola soy Patomocho.¿En que puedo ayudarle?">
         <button type="submit">Enviar</button>
       </form>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
-  export default {
-    data() {
-      return {
-        messages: [],
-        newMessage: '',
+<script>
+export default {
+  data() {
+    return {
+      messages: [],
+      newMessage: '',
+    };
+  },
+  methods: {
+    async sendMessage() {
+      const message = {
+        id: Date.now(),
+        text: `Yo: ${this.newMessage}`,
+        isReceived: false,
       };
-    },
-    methods: {
-      async sendMessage() {
-        const message = {
+      this.messages.push(message);
+      this.newMessage = '';
+
+      try {
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Authorization', 'Bearer   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');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Methods', 'POST');
+        headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+        const response = await fetch('https://api.openai.com/v1/completions', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            prompt: `Soy Patomocho, tu barman personal.\nSobre cócteles: Pregunta: ${message.text}\nRespuesta:`,
+            max_tokens: 1000,
+            model: 'text-davinci-003'
+          })
+        });
+
+        const generatedText = (await response.json()).choices[0].text.trim();
+
+        const receivedMessage = {
           id: Date.now(),
-          text: `Yo: ${this.newMessage}`,
-          isReceived: false,
+          text: `Patomocho: ${generatedText}`,
+          isReceived: true,
         };
-        this.messages.push(message);
-        this.newMessage = '';
+        this.messages.push(receivedMessage);
 
-        try {
-          const headers = new Headers();
-          headers.append('Content-Type', 'application/json');
-          headers.append('Authorization', 'Bearer   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');
-          headers.append('Access-Control-Allow-Origin', '*');
-          headers.append('Access-Control-Allow-Methods', 'POST');
-          headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-          const response = await fetch('https://api.openai.com/v1/completions', {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify({
-              prompt: `Soy Patomocho, tu barman  personal.\nSobre cócteles: Pregunta: ${message.text}\nRespuesta:`,  
-              max_tokens: 1000,
-              model: 'text-davinci-003'
-            })
-          });
-
-          const generatedText = (await response.json()).choices[0].text.trim();
-
-          const receivedMessage = {
-            id: Date.now(),
-            text: `Patomocho: ${generatedText}`,
-            isReceived: true,
-          };
-          this.messages.push(receivedMessage);
-        } catch (error) {
-          console.error(error);
-          const errorMessage = {
-            id: Date.now(),
-            text: 'Patomocho ha bebido demasiado..',
-            isReceived: true,
-          };
-          this.messages.push(errorMessage);
-        }
-      },
+        // Desplazar automáticamente el chat-box hasta el fondo después de recibir un mensaje
+        this.$nextTick(() => {
+          this.$refs.chatBox.scrollTo(0, this.$refs.chatBox.scrollHeight);
+        });
+      } catch (error) {
+        console.error(error);
+        const errorMessage = {
+          id: Date.now(),
+          text: 'Patomocho ha bebido demasiado..',
+          isReceived: true,
+        };
+        this.messages.push(errorMessage);
+      }
     },
-  };
-  </script>
+  },
+};
+</script>
+
 
 
   <style>
  .chat-box {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 300px;
   padding: 10px;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 500px;
   margin-bottom: 100px;
+  overflow-y: scroll;
 
 
-  
 }
+
+.form {
+  max-width: 500px; 
+  margin: auto;
+  }
 
 form {
   display: flex;
@@ -91,6 +107,8 @@ form {
   
   
 }
+
+
 
 input[type="text"] {
   flex-grow: 1;
