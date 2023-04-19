@@ -2,7 +2,6 @@ const fetch = require('node-fetch');
 
 const handler = async (event) => {
     try {
-        console.log(process.env.VITE_API_KEY);
         // eslint-disable-next-line no-undef
         const apiToken = process.env.VITE_API_KEY;
         const message = event.queryStringParameters;
