@@ -34,6 +34,10 @@ export default {
       this.messages.push(message);
       this.newMessage = '';
 
+      this.$nextTick(() => {
+        this.$refs.chatBox.scrollTo(0, this.$refs.chatBox.scrollHeight);
+      });
+
       try {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -81,34 +85,35 @@ export default {
 
 
 
-  <style>
- .chat-box {
+<style>
+.chat-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 300px;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 500px;
-  margin-bottom: 100px;
-  overflow-y: scroll;
-
-
+  padding: 20px;
+  align-items: center;
 }
 
+.chat-box,
 .form {
-  max-width: 500px; 
-  margin: auto;
-  }
+  width: 100%;
+  max-width: 500px;
+}
+
+.chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  gap: 10px;
+}
 
 form {
   display: flex;
   margin-top: 10px;
-  
-  
 }
-
-
 
 input[type="text"] {
   flex-grow: 1;
@@ -117,7 +122,6 @@ input[type="text"] {
   border: none;
   border-radius: 5px 0 0 5px;
   margin-right: 5px;
-  
 }
 
 button[type="submit"] {
@@ -138,7 +142,7 @@ button[type="submit"] {
   max-width: 80%;
   align-self: flex-start;
   color: black;
- 
+
   margin-right: auto;
   margin-left: 0;
 }
@@ -161,15 +165,13 @@ button[type="submit"] {
 }
 
 .received::before {
- 
+
   font-weight: bold;
 }
 
 @media only screen and (max-width: 500px) {
   .chat-box {
-    height: auto;
-    max-width: 100%;
-    margin: 0;
+    max-height: 500px;
   }
 
   .sent,
@@ -178,7 +180,11 @@ button[type="submit"] {
   }
 }
 
-  </style> 
+@media only screen and (min-width: 500px) {
+  .chat-box {
+    max-height: 600px;
+  }
+}
+</style>
 
- 
-  
+

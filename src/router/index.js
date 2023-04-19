@@ -18,11 +18,11 @@ const router = createRouter({
       component: GamesView
     },
     {
-      path: '/details/:id',
+      path: '/detalles/:id',
       name: 'details',
       component: () => import('../views/DetailsView.vue')
     },{
-      path: '/search',
+      path: '/busqueda',
       name: 'search',
       component: () => import('../views/SearchView.vue')
     },{
