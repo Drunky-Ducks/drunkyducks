@@ -13,14 +13,18 @@ export default {
   },
   methods: {
     searchCocktail({ target }) {
-      const result = []
+      let result = []
+      
+      if(target.name.value === "") {
+        result = ""
+      } else {
+        const cocktail = target.name.value.toLowerCase()
 
-      const cocktail = target.name.value.toLowerCase()
-
-      for (const nameCocktail of cocktails.drinks) {
-        const name = nameCocktail.strDrink.toLowerCase();
-        if (name.startsWith(cocktail)) {
-          result.push(nameCocktail)
+        for (const nameCocktail of cocktails.drinks) {
+          const name = nameCocktail.strDrink.toLowerCase();
+          if (name.startsWith(cocktail)) {
+            result.push(nameCocktail)
+          }
         }
       }
 
@@ -53,7 +57,7 @@ export default {
   width: 80%;
   max-width: 800px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .search-input {
@@ -81,4 +85,9 @@ export default {
   background-color: #454545;
 }
 
+@media screen and (max-width: 576px) {
+  .search-input {
+    max-width: 80%;
+  }
+}
 </style>

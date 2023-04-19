@@ -24,24 +24,24 @@ export default {
 
 <template>
   <div class="container">
-    <div class="title">
-      <Swiper title="Cocteles Clasicos"></Swiper>
+    <div class="title animate__animated animate__fadeInDown animate__delay-10">
+      <Swiper title="CÓCTELES CLÁSICOS"></Swiper>
     </div>
     <div class="cocktails">
       <Swiper :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.strClassic)"></Swiper>
     </div>
   </div>
   <div class="container">
-    <div class="title">
-      <Swiper title="Cocteles Sin Alcohol"></Swiper>
+    <div class="title animate__animated animate__fadeInDown animate__delay-10">
+      <Swiper title="CÓCTELES SIN ALCOHOL"></Swiper>
     </div>
     <div class="cocktails">
       <Swiper :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.strNoAlcoholic)"></Swiper>
     </div>
   </div>
   <div class="container">
-    <div class="title">
-      <Swiper title="Cocteles Fuertes"></Swiper>
+    <div class="title animate__animated animate__fadeInDown animate__delay-10">
+      <Swiper title="CÓCTELES FUERTES"></Swiper>
     </div>
     <div class="cocktails">
       <Swiper :cocktails="this.cocktails.drinks.filter(cocktail => cocktail.strHardDrink)"></Swiper>
@@ -50,4 +50,5 @@ export default {
 </template>
 
 <style>
+
 </style>
