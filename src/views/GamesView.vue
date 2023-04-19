@@ -4,7 +4,7 @@
 
     </div>
 
-    <div class="games-container animate__animated animate__fadeInUp">
+    <div class="games-container">
       <game-details
         v-for="(game, index) in games"
         :key="index"

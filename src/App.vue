@@ -29,10 +29,12 @@ export default {
   beforeMount() {
     this.showModal = localStorage.overage === "true"
     this.isLight = JSON.parse(localStorage.getItem("isLight"))
+    document.body.classList = this.isLight ? "light-mode" : "dark-mode"
   },
   watch: {
     isLight: function () {
       localStorage.setItem("isLight", JSON.stringify(this.isLight));
+      document.body.classList = this.isLight ? "light-mode" : "dark-mode"
     },
     $route (to) {
       const { fullPath: actualPath} = to
@@ -54,7 +56,7 @@ export default {
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
   <Navbar></Navbar>
   <ChatHelp v-if="showPopUp"></ChatHelp>
-  <header :class="{ 'light-mode': isLight }">
+  <header>
     <div class="title-logo animate__animated animate__fadeInDown animate__delay-10">
       <h1>Drunky<span>Ducks</span></h1>
     </div>
