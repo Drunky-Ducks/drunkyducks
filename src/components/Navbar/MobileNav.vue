@@ -8,15 +8,10 @@ export default {
 
 <template>
   <div class="mobile navbar">
-    <div class="nav-item">
-      <RouterLink to="/">🏠</RouterLink>
-    </div>
-    <div class="nav-item">
-      <RouterLink to="/buscador">🔍</RouterLink>
-    </div>
-    <div class="nav-item">
-      <RouterLink to="/juegos">🎮</RouterLink>
-    </div>
+    <RouterLink class="nav-item" to="/">🏠</RouterLink>
+    <RouterLink class="nav-item" to="/buscador">🔍</RouterLink>
+    <RouterLink class="nav-item" to="/juegos">🎮</RouterLink>
+
   </div>
 </template>
 
