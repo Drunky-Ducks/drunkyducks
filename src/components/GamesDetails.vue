@@ -1,5 +1,5 @@
 <template>
-  <div class="game-card">
+  <div class="game-card animate__animated animate__fadeInDown animate__delay-10" >
     <img :src="game.photo" alt="game-title" />
     <h2>{{ game.title }}</h2>
     <p>{{ game.description }}</p>
