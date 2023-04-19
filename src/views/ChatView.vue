@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
   data() {
     return {
@@ -39,24 +41,14 @@ export default {
       });
 
       try {
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        headers.append('Authorization', 'Bearer   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');
-        headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Access-Control-Allow-Methods', 'POST');
-        headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-        const response = await fetch('https://api.openai.com/v1/completions', {
-          method: 'POST',
-          headers: headers,
-          body: JSON.stringify({
-            prompt: `Soy Patomocho, tu barman personal.\nSobre cócteles: Pregunta: ${message.text}\nRespuesta:`,
-            max_tokens: 1000,
-            model: 'text-davinci-003'
-          })
+        const response = await axios.get('/.netlify/functions/getChatGPTResponse', {
+          params: {
+            message: message
+          }
         });
 
-        const generatedText = (await response.json()).choices[0].text.trim();
+
+        const generatedText = await response.data.choices[0].text.trim();
 
         const receivedMessage = {
           id: Date.now(),
