@@ -1,32 +1,25 @@
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const handler = async (event) => {
     try {
         // eslint-disable-next-line no-undef
         const apiToken = process.env.VITE_API_KEY;
+        const apiUrl = 'https://api.openai.com/v1/completions';
         const message = event.queryStringParameters;
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        headers.append('Authorization', 'Bearer ' + apiToken);
-        headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Access-Control-Allow-Methods', 'POST');
-        headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-        const response = await fetch('https://api.openai.com/v1/completions', {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify({
-              prompt: `Soy Patomocho, tu barman personal.\nSobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
-              max_tokens: 1000,
-              model: 'text-davinci-003'
-            })
-        });
+        const headers = {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiToken}`,
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+        };
 
-        if (!response.ok) {
-          throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        const data = await response.json();
+        const { data } = await axios.post(apiUrl, {
+          prompt: `Soy Patomocho, tu barman personal.\nSobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
+          max_tokens: 1000,
+          model: 'text-davinci-003'
+        }, { headers });
 
         return {
           statusCode: 200,
