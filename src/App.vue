@@ -64,7 +64,7 @@ export default {
       </button>
     </div>
   </header>
-  <div>
+  <div class="container">
     <RouterView />
   </div>
   <FooterPage />

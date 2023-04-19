@@ -1,9 +1,9 @@
 <template>
     <div class="title">
         <h1>LOS MEJORES JUEGOS PARA BEBER</h1>
-        
+
     </div>
-    
+
     <div class="games-container animate__animated animate__fadeInUp">
       <game-details
         v-for="(game, index) in games"
@@ -12,7 +12,7 @@
       ></game-details>
     </div>
   </template>
-  
+
   <script>
   import GameDetails from "../components/GamesDetails.vue";
   import 'animate.css';
@@ -48,16 +48,16 @@
             description: "En este juego se necesita un smartphone con temporizador. Los jugadores activan el temporizador y, al comenzar la foto, dicen en voz alta un reto. Quien logra cumplir el challenge en la foto gana, y se puede tratar de obstaculizar a los demás jugadores. Si alguien no cumple el reto, debe beber.",
             photo: "https://juegosdebeber.net/wp-content/uploads/2019/06/juego-de-beber-fotos.jpg",
           },
-        
-        
-        
+
+
+
         ],
       };
     },
   };
   </script>
-  
-  <style>
+
+  <style scoped>
     h1 {
         text-align: center;
     }
@@ -68,4 +68,3 @@
     justify-content: center;
   }
   </style>
-  
