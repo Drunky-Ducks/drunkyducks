@@ -47,7 +47,7 @@ export default {
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
   <Navbar></Navbar>
   <header :class="{ 'light-mode': isLight }">
-    <div class="title-logo">
+    <div class="title-logo animate__animated animate__fadeInDown animate__delay-10">
       <h1>Drunky<span>Ducks</span></h1>
     </div>
     <div class='theme-button-wrapper'>
@@ -79,7 +79,6 @@ header {
   align-items: center;
   text-shadow: 2px 2px 10px black;
   font-family: Cheri, fantasy;
-  margin-top: 35px;
 }
 
 .title-logo a {
@@ -128,4 +127,9 @@ header {
     margin-top: 3rem;
   }
 }
+@media screen and (min-width: 500px) {
+  .title-logo{
+    margin-top: 5rem;
+   }
+  }
 </style>

@@ -46,6 +46,7 @@ export default {
         font-weight: 700;
         font-size: 20px;
         text-shadow: 0 0 10px black;
+        font-family: DynaPuff-Regular;
     }
 
     .cocktail-details {

@@ -21,7 +21,10 @@
   font-family: DuruSans;
   src: url('/font/DuruSans-Regular.ttf');
 }
-
+@font-face {
+  font-family: DynaPuff-Regular;
+  src: url('/font/DynaPuff-Regular.ttf');
+}
 html,
 body {
   width: 100vw;
