@@ -4,16 +4,18 @@ import { RouterView } from 'vue-router';
 import FooterPage from './components/FooterPage.vue';
 import ModalAge from './components/ModalAge.vue';
 import Navbar from './components/Navbar/Navbar.vue';
+import ChatHelp from './components/ChatHelp.vue';
 
 export default {
   components: {
-    ModalAge, FooterPage, Navbar,
+    ModalAge, FooterPage, Navbar, ChatHelp,
     RouterView
   },
   data: () => {
     return {
       showModal: false,
-      isLight: false
+      isLight: false,
+      showPopUp: true
     }
   },
   computed: {
@@ -31,7 +33,10 @@ export default {
   watch: {
     isLight: function () {
       localStorage.setItem("isLight", JSON.stringify(this.isLight));
-      document.body.classList = this.isLight ? "light-mode": "dark-mode"
+    },
+    $route (to) {
+      const { fullPath: actualPath} = to
+      this.showPopUp = actualPath !== '/chat'
     }
   },
   methods: {
@@ -48,8 +53,9 @@ export default {
 <template>
   <ModalAge @hiddenModal="hiddenModal" v-if="isShowModal"></ModalAge>
   <Navbar></Navbar>
-  <header>
-    <div class="title-logo">
+  <ChatHelp v-if="showPopUp"></ChatHelp>
+  <header :class="{ 'light-mode': isLight }">
+    <div class="title-logo animate__animated animate__fadeInDown animate__delay-10">
       <h1>Drunky<span>Ducks</span></h1>
     </div>
     <div class='theme-button-wrapper'>
@@ -78,7 +84,6 @@ header {
   align-items: center;
   text-shadow: 2px 2px 10px black;
   font-family: Cheri, fantasy;
-  margin-top: 35px;
 }
 
 .title-logo a {
@@ -127,4 +132,9 @@ header {
     margin-top: 3rem;
   }
 }
+@media screen and (min-width: 500px) {
+  .title-logo{
+    margin-top: 5rem;
+   }
+  }
 </style>

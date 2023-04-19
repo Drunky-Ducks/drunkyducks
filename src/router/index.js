@@ -16,19 +16,17 @@ const router = createRouter({
       component: GamesView
     },
     {
-      path: '/details/:id',
+      path: '/detalles/:id',
       name: 'details',
       component: () => import('../views/DetailsView.vue')
-    },
-    {
-      path: '/search',
+    },{
+      path: '/buscador',
       name: 'search',
       component: () => import('../views/SearchView.vue')
-    },
-    {
-      path: '/form',
-      name: 'form',
-      component: () => import('../views/FormView.vue')
+    },{
+      path: '/chat',
+      name: 'chat',
+      component: () => import('../views/ChatView.vue')
     }
   ]
 })
