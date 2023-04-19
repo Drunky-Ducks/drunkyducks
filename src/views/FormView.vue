@@ -18,7 +18,6 @@ export default {
             <button type="submit">ENVIAR</button>
 
             <input type="hidden" name="_next" value="https://drunkyducks.netlify.app/">
-            <input type="hidden" name="_captcha" value="false">
         </form>
     </div>
 </template>
