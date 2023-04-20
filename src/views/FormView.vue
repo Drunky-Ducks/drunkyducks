@@ -1,6 +1,10 @@
 <script>
+import { RouterLink } from 'vue-router';
 export default {
-    name: 'NewCocktailForm'
+    name: 'NewCocktailForm',
+    components: {
+        RouterLink
+    }
 }
 </script>
 <template>
@@ -19,6 +23,7 @@ export default {
 
             <input type="hidden" name="_next" value="https://drunkyducks.netlify.app/">
         </form>
+        <p>Al darle a ENVIAR aceptas los <RouterLink to="/privacidad">términos y políticas de privacidad</RouterLink></p>
     </div>
 </template>
 
@@ -26,6 +31,8 @@ export default {
 @media screen and (min-width: 320px) {
     .form-container {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 

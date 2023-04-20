@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/formulario',
       name: 'formulario',
       component: () => import('../views/FormView.vue')
+    },
+    {
+      path: '/privacidad',
+      name: 'privacidad',
+      component: () => import('../views/PrivacityView.vue')
     }
   ]
 })
