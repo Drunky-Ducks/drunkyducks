@@ -36,12 +36,10 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 6rem;
     }
 
     form {
         width: 84vw;
-        height: 50vh;
         background-color: var(--clr-base-bg);
         display: grid;
         grid-template-rows: 0.3fr 1.2fr 0.5fr;
@@ -104,19 +102,7 @@ export default {
     }
 }
 
-
-
-@media screen and (max-width: 394px) {
-    .form-container {
-        gap: 12rem;
-    }
-}
-
 @media screen and (min-width: 425px) {
-    .form-container {
-        gap: 4rem;
-    }
-
     form {
         width: 80vw;
     }
