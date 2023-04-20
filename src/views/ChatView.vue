@@ -6,10 +6,13 @@
         <p v-if="message.isReceived" class="received">{{ message.text }}</p>
         <p v-else class="sent">{{ message.text }}</p>
       </div>
+      <div v-if="isWaitingResponse">
+        <p class="received"><WaitingResponse></WaitingResponse></p>
+      </div>
     </div>
     <div class="form">
       <form @submit.prevent="sendMessage">
-        <input type="text" v-model="newMessage" placeholder="Hola soy Patomocho.¿En que puedo ayudarle?">
+        <input type="text" v-model="newMessage" placeholder="Escribe aquí...">
         <button type="submit">Enviar</button>
       </form>
     </div>
@@ -18,12 +21,21 @@
 
 <script>
 import axios from "axios"
+import WaitingResponse from "../components/Chat/WaitingResponse.vue"
 
 export default {
+  components: {
+    WaitingResponse
+  },
   data() {
     return {
-      messages: [],
+      messages: [{
+        id:"000001",
+        text: "Hola soy Patomocho.¿En que puedo ayudarle?",
+        isReceived: true,
+      }],
       newMessage: '',
+      isWaitingResponse: false
     };
   },
   methods: {
@@ -35,6 +47,7 @@ export default {
       };
       this.messages.push(message);
       this.newMessage = '';
+      this.isWaitingResponse = true;
 
       this.$nextTick(() => {
         this.$refs.chatBox.scrollTo(0, this.$refs.chatBox.scrollHeight);
@@ -55,6 +68,7 @@ export default {
           text: `Patomocho: ${generatedText}`,
           isReceived: true,
         };
+        this.isWaitingResponse = false;
         this.messages.push(receivedMessage);
 
         // Desplazar automáticamente el chat-box hasta el fondo después de recibir un mensaje
@@ -68,7 +82,11 @@ export default {
           text: 'Patomocho ha bebido demasiado..',
           isReceived: true,
         };
+        this.isWaitingResponse = false;
         this.messages.push(errorMessage);
+        this.$nextTick(() => {
+          this.$refs.chatBox.scrollTo(0, this.$refs.chatBox.scrollHeight);
+        });
       }
     },
   },

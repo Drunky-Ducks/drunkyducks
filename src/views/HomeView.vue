@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router';
 export default {
   name: "HomeView",
   components: {
-    Swiper
+    Swiper, RouterLink
   }, beforeMount() {
 
   }, data() {
@@ -48,7 +48,7 @@ export default {
     </div>
   </div>
   <div class="form-button-wrapper">
-    <RouterLink to="/formulario" class="form-button"> Recomiendanos un cóctel</RouterLink>
+    <RouterLink to="/formulario" class="form-button"> Recomiéndanos un cóctel</RouterLink>
   </div>
 </template>
 

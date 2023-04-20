@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router';
 import FooterPage from './components/FooterPage.vue';
 import ModalAge from './components/ModalAge.vue';
 import Navbar from './components/Navbar/Navbar.vue';
-import ChatHelp from './components/ChatHelp.vue';
+import ChatHelp from './components/Chat/ChatHelp.vue';
 import SwitcherTheme from './components/SwitcherTheme.vue';
 
 export default {
