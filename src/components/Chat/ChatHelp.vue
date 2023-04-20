@@ -32,4 +32,8 @@ export default {
   place-content: center;
   border-radius: 15px;
 }
+
+.light-mode .pop-up img{
+  filter: brightness(0) invert(1);
+}
 </style>
