@@ -11,7 +11,7 @@ export default {
 
 <template>
   <RouterLink class="pop-up" to="/chat" title="Te ayudo?">
-    ?
+    <img src="/media/chat.png" alt="">
   </RouterLink>
 </template>
 
