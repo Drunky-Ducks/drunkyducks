@@ -23,7 +23,9 @@ export default {
 
             <input type="hidden" name="_next" value="https://drunkyducks.netlify.app/">
         </form>
-        <p>Al darle a ENVIAR aceptas los <RouterLink to="/privacidad">términos y políticas de privacidad</RouterLink></p>
+        <p>
+            Al darle a ENVIAR aceptas los <RouterLink to="/privacidad">términos y políticas de privacidad</RouterLink>
+        </p>
     </div>
 </template>
 
@@ -38,7 +40,6 @@ export default {
 
     form {
         width: 84vw;
-        height: 50vh;
         background-color: var(--clr-base-bg);
         display: grid;
         grid-template-rows: 0.3fr 1.2fr 0.5fr;
@@ -94,6 +95,10 @@ export default {
         justify-self: center;
         font-family: Durusans, monospace;
 
+    }
+
+    p {
+        text-align: center;
     }
 }
 
