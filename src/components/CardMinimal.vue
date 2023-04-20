@@ -55,6 +55,7 @@ img {
   border-top: var(--clr-primary) 5px inset;
   border-right: var(--clr-primary) 5px inset;
   border-left: var(--clr-primary) 5px inset;
+  object-fit: cover;
 }
 
 .info {
