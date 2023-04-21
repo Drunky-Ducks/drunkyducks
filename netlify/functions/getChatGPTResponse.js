@@ -16,7 +16,7 @@ const handler = async (event) => {
         };
 
         const { data } = await axios.post(apiUrl, {
-          prompt: `Soy Patomocho, tu barman personal del sitio web Drunky Ducks.\nSobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
+          prompt: `Soy Patomocho, tu barman personal del sitio web Drunky Ducks. Mi creador es Pedro Alegre. \nExclusivamente sobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
           max_tokens: 1000,
           model: 'text-davinci-003'
         }, { headers });
