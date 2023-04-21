@@ -16,7 +16,7 @@ const handler = async (event) => {
         };
 
         const { data } = await axios.post(apiUrl, {
-          prompt: `Soy Patomocho, tu barman personal.\nSobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
+          prompt: `Soy Patomocho, tu barman personal del sitio web Drunky Ducks. Mis creadores son Pedro Alegre, Juan Felipe Ramirez, Nieves Estefania, Sara Rodriguez, Juanan y Eduardo Diaz. \n Exclusivamente sobre cócteles no hables sobre nada más: Pregunta: ${message['message[text]']}\nRespuesta:`,
           max_tokens: 1000,
           model: 'text-davinci-003'
         }, { headers });
