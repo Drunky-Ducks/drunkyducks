@@ -46,7 +46,7 @@ export default {
 <template>
   <div>
     <SearchCocktails @fillResult="fillResult"></SearchCocktails>
-    <div class="container">
+    <div class="container-cocktail">
       <div class="tittle animate__animated animate__fadeInDown animate__delay-10">CÓCTELES</div>
       <div class="list">
         <NotFound v-if="!searchOcurrence.length"></NotFound>
@@ -57,7 +57,7 @@ export default {
 </template>
 
 <style scoped>
-.container {
+.container-cocktail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,6 @@ export default {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 40px;
   width: 100%;
   flex: 1;
 }
