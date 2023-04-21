@@ -24,8 +24,12 @@ export default {
   bottom: 0;
   background-color: rgb(51, 51, 51);
 }
-.fa-house {
-  font-size: 2rem;
-  color: red;
+.nav-item svg {
+  width: 40px;
+  color: var(--clr-primary);
+}
+
+.nav-item:nth-child(2) svg {
+  width: 35px;
 }
 </style>

@@ -56,6 +56,7 @@ footer {
   display: flex;
   gap: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .icon {
