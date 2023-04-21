@@ -12,7 +12,7 @@
     </div>
     <div class="form">
       <form @submit.prevent="sendMessage">
-        <input type="text" v-model="newMessage" placeholder="Escribe aquí...">
+        <input type="text" v-model="newMessage" placeholder="Escribe aquí..." required>
         <button type="submit">Enviar</button>
       </form>
     </div>
