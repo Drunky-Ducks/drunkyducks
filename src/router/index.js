@@ -38,6 +38,11 @@ const router = createRouter({
       path: '/privacidad',
       name: 'privacidad',
       component: () => import('../views/PrivacityView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/404View.vue')
     }
   ]
 })
