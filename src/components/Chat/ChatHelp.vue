@@ -31,6 +31,7 @@ export default {
   display: grid;
   place-content: center;
   border-radius: 15px;
+  box-shadow: 0 0 5px black;
 }
 
 .light-mode .pop-up img{
