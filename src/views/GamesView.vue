@@ -40,7 +40,7 @@
           },
           {
             title: "Tomatito",
-            description: "En este juego, los jugadores se sientan en círculo y pasan un objeto imaginario llamado tomatito de un jugador a otro. La persona con el tomatito puede abofetear al de al lado y  los demás jugadores pueden defenderse cubriendo solo la mejilla más cercana. Si alguien se equivoca, puede ser abofeteado. La persona con la cara más roja al final debe beber",
+            description: "Los jugadores se sientan en círculo y pasan un objeto  llamado tomatito de un jugador a otro. La persona con el tomatito puede abofetear al de al lado y  los demás jugadores pueden defenderse cubriendo solo la mejilla más cercana. Si alguien se equivoca, puede ser abofeteado.El que tenga  la cara más roja al final bebe.",
             photo: "http://juegosdebeber.net/wp-content/uploads/2019/06/tomatito-juego.jpg  ",
           },
           {
