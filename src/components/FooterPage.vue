@@ -27,7 +27,7 @@ export default {
       </div>
     </div>
     <div class="developed">
-      <span>Desarrollado por Drapper Drake ©</span>
+      <span>Desarrollado por Dapper Drake ©</span>
     </div>
   </footer>
 </template>
