@@ -20,7 +20,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 380px;
-  height: 600px;
+  min-height: 600px;
   margin: 10px;
   padding: 10px 20px;
   margin: 50px;

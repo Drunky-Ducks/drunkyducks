@@ -1,7 +1,7 @@
 <template>
     <div class='theme-button-wrapper'>
-        <button @click=toggleMode>
-            <img :src="getURL" class="icon-mode" />
+        <button @click=toggleMode aria-label="cambiar tema">
+            <img :src="getURL" class="icon-mode" alt="cambiar tema"/>
         </button>
     </div>
 </template>
@@ -34,7 +34,7 @@ export default {
 }
 
 .icon-mode {
-    width: 100%;
+    width: 80%;
 }
 
 .theme-button-wrapper {
@@ -50,11 +50,14 @@ export default {
     background-color: gray;
     border: none;
     border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 575px) {
     .theme-button-wrapper {
-        bottom: 4rem
+        bottom: 70px;
     }
 }
 
