@@ -5,7 +5,7 @@ const handler = async (event) => {
         // eslint-disable-next-line no-undef
         const apiToken = process.env.VITE_API_KEY;
         const apiUrl = 'https://api.openai.com/v1/completions';
-        const message = event.queryStringParameters;
+        const message = event.queryStringParameters;  
 
         const headers = {
           'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ const handler = async (event) => {
         };
 
         const { data } = await axios.post(apiUrl, {
-          prompt: `Soy Patomocho, tu barman personal de Drunky Ducks.\nSobre cócteles: Pregunta: ${message['message[text]']}\nRespuesta:`,
+
           max_tokens: 1000,
           model: 'text-davinci-003'
         }, { headers });
